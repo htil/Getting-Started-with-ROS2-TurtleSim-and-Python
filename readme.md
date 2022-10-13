@@ -90,6 +90,4 @@ Update `run.sh` file permissions
 
 `chmod +x run.sh`
 
-`cd ~/ros2_ws/`
-
 `./run.sh`
