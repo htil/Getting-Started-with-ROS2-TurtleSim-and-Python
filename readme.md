@@ -30,7 +30,7 @@ Add the following after the **license** declaration in the `~/ros2_ws/src/turtle
 <exec_depend>std_msgs</exec_depend>
 ```
  
-Note: Remove `<depend>rclpy</exec_depend>` in the `package.xml` file.
+Note: Remove `<depend>rclpy</depend>` in the `package.xml` file.
 
 ### Add an entry point
 
