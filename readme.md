@@ -1,6 +1,9 @@
 # Getting Started with ROS, Python, and TurtleSim
 
 ### Create the package
+Navigate into `~/ros2_ws/src`
+
+`cd ~/ros2_ws/src`
 
 `ros2 pkg create turtle_sim_hw --build-type ament_python --dependencies rclpy `
 
@@ -10,7 +13,7 @@
 
 ### Get `script.py` file
 
-Download file
+Download `script.py` file
 
 `wget https://raw.githubusercontent.com/htil/Getting-Started-with-ROS2-TurtleSim-and-Python/master/script.py`
 
@@ -56,6 +59,8 @@ install_scripts=$base/lib/turtle_sim_hw
 
 Check for missing dependencies
 
+`cd ~/ros2_ws/`
+
 `rosdep install -i --from-path src --rosdistro humble -y`
 
 Build new package while in `ros2_ws`
@@ -64,15 +69,21 @@ Build new package while in `ros2_ws`
 
 **OPEN A NEW TERMINAL:** and run the command below while in `ros2_ws`:
 
-`. install/setup.bash`
-
 Run the **turtlesim node**
 
 `ros2 run turtlesim turtlesim_node`
 
 **OPEN A NEW TERMINAL:** Run your ROS package.
 
+`cd ~/ros2_ws/`
+
+`. install/setup.bash`
+
 `ros2 run turtle_sim_hw start`
+
+### Check to see if the turtle is moving
+
+
 
 ### Get `run.sh` file
 
