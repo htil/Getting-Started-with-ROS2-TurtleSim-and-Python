@@ -65,7 +65,7 @@ Check for missing dependencies
 
 Build new package while in `ros2_ws`
 
-`colcon build --packages-select turtle_sim_hw`
+`colcon build --symlink-install --packages-select turtle_sim_hw`
 
 **OPEN A NEW TERMINAL:** and run the command below while in `ros2_ws`:
 
