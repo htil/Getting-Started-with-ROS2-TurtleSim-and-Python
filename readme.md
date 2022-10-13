@@ -1,0 +1,90 @@
+# Getting Started with ROS, Python, and TurtleSim
+
+### Create the package
+
+`ros2 pkg create turtle_sim_hw --build-type ament_python --dependencies rclpy`
+
+### Navigate to ROS package script folder
+
+`cd ~/ros2_ws/src/turtle_sim_hw/turtle_sim_hw`
+
+### Get `script.py` file
+
+`wget ...`
+
+### Get `run.sh` file
+
+Navigate to `ros2_ws`
+
+`cd ~/ros2_ws/`
+
+Download run.sh file
+
+`wget ...`
+
+Update `run.sh` file permissions
+
+`chmod +x run.sh`
+
+### Add dependencies
+
+Add the following after the **license** declaration in the `~/ros2_ws/src/turtle_sim_hw/package.xml` file.
+
+```
+<exec_depend>rclpy</exec_depend>
+<exec_depend>std_msgs</exec_depend>
+```
+
+### Add an entry point
+
+Open the `~/ros2_ws/src/turtle_sim_hw/setup.py` file.
+
+Add the following within the `console_script` brackets of the `entry_points` field:
+
+```
+entry_points={
+        'console_scripts': [
+            'start = turtle_sim_hw.script:main',
+        ],
+},
+```
+
+### Check `setup.cfg`
+
+The contents of `setup.cfg` should look like the following.
+
+```
+[develop]
+script_dir=$base/lib/turtle_sim_hw
+[install]
+install_scripts=$base/lib/turtle_sim_hw
+```
+
+### Build and run
+
+Check for missing dependencies
+
+`rosdep install -i --from-path src --rosdistro humble -y`
+
+Build new package while in `ros2_ws`
+
+`colcon build --packages-select turtle_sim_hw`
+
+**OPEN A NEW TERMINAL** and run the command below while in `ros2_ws`:
+
+`. install/setup.bash`
+
+Run the **turtlesim node**
+
+`ros2 run turtlesim turtlesim_node`
+
+Run your ROS package.
+
+`ros2 run turtle_sim_hw start`
+
+After editing the file you should be able to build and run your script using the `run.sh` file.
+
+`cd ~/ros2_ws/`
+
+`./run.sh`
+◊
