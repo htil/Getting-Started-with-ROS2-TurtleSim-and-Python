@@ -2,7 +2,7 @@
 
 ### Create the package
 
-`ros2 pkg create turtle_sim_hw --build-type ament_python --dependencies rclpy`
+`ros2 pkg create turtle_sim_hw --build-type ament_python --dependencies rclpy `
 
 ### Navigate to ROS package script folder
 
@@ -10,21 +10,13 @@
 
 ### Get `script.py` file
 
-`wget ...`
+Download file
 
-### Get `run.sh` file
+`wget https://raw.githubusercontent.com/htil/Getting-Started-with-ROS2-TurtleSim-and-Python/master/script.py`
 
-Navigate to `ros2_ws`
+Update `script.py` file permissions
 
-`cd ~/ros2_ws/`
-
-Download run.sh file
-
-`wget ...`
-
-Update `run.sh` file permissions
-
-`chmod +x run.sh`
+`chmod +x script.py`
 
 ### Add dependencies
 
@@ -70,7 +62,7 @@ Build new package while in `ros2_ws`
 
 `colcon build --packages-select turtle_sim_hw`
 
-**OPEN A NEW TERMINAL** and run the command below while in `ros2_ws`:
+**OPEN A NEW TERMINAL:** and run the command below while in `ros2_ws`:
 
 `. install/setup.bash`
 
@@ -78,11 +70,25 @@ Run the **turtlesim node**
 
 `ros2 run turtlesim turtlesim_node`
 
-Run your ROS package.
+**OPEN A NEW TERMINAL:** Run your ROS package.
 
 `ros2 run turtle_sim_hw start`
 
+### Get `run.sh` file
+
 After editing the file you should be able to build and run your script using the `run.sh` file.
+
+Navigate to `ros2_ws`
+
+`cd ~/ros2_ws/`
+
+Download run.sh file
+
+`wget https://raw.githubusercontent.com/htil/Getting-Started-with-ROS2-TurtleSim-and-Python/master/run.sh`
+
+Update `run.sh` file permissions
+
+`chmod +x run.sh`
 
 `cd ~/ros2_ws/`
 
