@@ -83,6 +83,9 @@ Run the **turtlesim node**
 
 ### Check to see if the turtle is moving
 
+<img src="https://github.com/htil/Getting-Started-with-ROS2-TurtleSim-and-Python/blob/master/turtlesim.png?raw=true"
+     alt="Markdown Monster icon"
+     style="width: 400px" />
 
 
 ### Get `run.sh` file
