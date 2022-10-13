@@ -87,4 +87,3 @@ After editing the file you should be able to build and run your script using the
 `cd ~/ros2_ws/`
 
 `./run.sh`
-◊
